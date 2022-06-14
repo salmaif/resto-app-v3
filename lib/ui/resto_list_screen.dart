@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:resto_app_v3/data/api/api_service.dart';
 import 'package:resto_app_v3/provider/resto_list_provider.dart';
 import 'package:resto_app_v3/ui/resto_search_screen.dart';
+import 'package:resto_app_v3/utils/result_state.dart';
 import 'package:resto_app_v3/widgets/list_page.dart';
 
 class RestoListScreen extends StatelessWidget {

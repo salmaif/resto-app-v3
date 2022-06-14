@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
+import 'package:resto_app_v3/utils/result_state.dart';
 import 'package:resto_app_v3/widgets/detail_page.dart';
 import 'package:resto_app_v3/data/api/api_service.dart';
 import 'package:resto_app_v3/provider/resto_detail_provider.dart';

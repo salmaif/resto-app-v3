@@ -3,6 +3,7 @@ import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 import 'package:resto_app_v3/data/api/api_service.dart';
 import 'package:resto_app_v3/provider/resto_search_provider.dart';
+import 'package:resto_app_v3/utils/result_state.dart';
 import 'package:resto_app_v3/widgets/search_page.dart';
 
 class RestoSearchScreen extends StatefulWidget {

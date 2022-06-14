@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:resto_app_v3/data/model/resto_search.dart';
 import 'package:resto_app_v3/data/api/api_service.dart';
-
-enum ResultState { loading, noData, hasData, error }
+import 'package:resto_app_v3/utils/result_state.dart';
 
 class RestoSearchProvider extends ChangeNotifier {
   final ApiService apiService;
