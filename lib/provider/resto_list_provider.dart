@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:resto_app_v3/data/api/api_service.dart';
 import 'package:resto_app_v3/data/model/resto_list.dart';
 import 'package:resto_app_v3/utils/result_state.dart';
@@ -10,12 +10,12 @@ class RestoListProvider extends ChangeNotifier {
     fetchRestoList();
   }
 
-  late ResultState _state;
-  late RestoList _list;
+  ResultState? _state;
+  RestoList? _list;
   String _message = '';
 
-  ResultState get state => _state;
-  RestoList get result => _list;
+  ResultState? get state => _state;
+  RestoList? get result => _list;
   String get message => _message;
 
   Future<dynamic> fetchRestoList() async {

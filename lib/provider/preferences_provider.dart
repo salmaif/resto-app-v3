@@ -8,11 +8,11 @@ class PreferencesProvider extends ChangeNotifier {
     _getDailyRestoPreferences();
   }
 
-  bool _isDailyNewsActive = false;
-  bool get isDailyNewsActive => _isDailyNewsActive;
+  bool _isDailyRestoActive = false;
+  bool get isDailyRestoActive => _isDailyRestoActive;
 
   void _getDailyRestoPreferences() async {
-    _isDailyNewsActive = await preferencesHelper.isDailyRestoActive;
+    _isDailyRestoActive = await preferencesHelper.isDailyRestoActive;
     notifyListeners();
   }
 

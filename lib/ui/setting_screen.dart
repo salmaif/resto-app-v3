@@ -20,7 +20,7 @@ class SettingScreen extends StatelessWidget {
           trailing: Consumer<SchedulingProvider>(
             builder: (context, scheduled, _) {
               return Switch.adaptive(
-                value: provider.isDailyNewsActive,
+                value: provider.isDailyRestoActive,
                 onChanged: (value) async {
                   scheduled.scheduledRestos(value);
                   provider.enableDailyNews(value);

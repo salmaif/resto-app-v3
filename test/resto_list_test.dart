@@ -64,7 +64,7 @@ void main() {
       RestoListProvider restoListProvider =
           RestoListProvider(apiService: ApiService(client));
       await restoListProvider.fetchRestoList();
-      var nameTest = restoListProvider.result.restaurants[0].name ==
+      var nameTest = restoListProvider.result?.restaurants[0].name ==
           Resto.fromJson(restoListTest).name;
       expect(nameTest, true);
     },
@@ -83,7 +83,7 @@ void main() {
       RestoListProvider restoListProvider =
           RestoListProvider(apiService: ApiService(client));
       await restoListProvider.fetchRestoList();
-      var nameTest = restoListProvider.result.restaurants[1].name ==
+      var nameTest = restoListProvider.result?.restaurants[1].name ==
           Resto.fromJson(restoListTest).name;
       expect(nameTest, false);
     },

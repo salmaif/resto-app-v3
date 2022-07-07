@@ -25,12 +25,12 @@ class RestoListScreen extends StatelessWidget {
               ),
             );
           } else if (state.state == ResultState.hasData) {
-            return ListView.builder(
+            return ListView.builder(              
               itemBuilder: (context, index) {
-                var resto = state.result.restaurants[index];
+                var resto = state.result!.restaurants[index];
                 return ListPage(restaurant: resto);
               },
-              itemCount: state.result.restaurants.length,
+              itemCount: state.result?.restaurants.length,
             );
           } else if (state.state == ResultState.noData) {
             return Center(

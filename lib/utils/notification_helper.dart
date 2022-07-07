@@ -57,10 +57,10 @@ class NotificationHelper {
 
     var titleNotification = "<b>Resto hari ini</b>";
     rand = Random().nextInt(restoList.restaurants.length);
-    var titleRestos = restoList.restaurants[rand].name;
+    var titleResto = restoList.restaurants[rand].name;
 
     await flutterLocalNotificationsPlugin.show(
-        0, titleNotification, titleRestos, platformChannelSpecifics,
+        0, titleNotification, titleResto, platformChannelSpecifics,
         payload: json.encode(restoList.restaurants[rand].toJson()));
   }
 
@@ -68,7 +68,6 @@ class NotificationHelper {
     selectNotificationSubject.stream.listen(
       (String payload) async {
         var data = RestoList.fromJson(json.decode(payload));
-//        var resto = data.restaurants[rand];
         Navigation.intentWithData(route, data.restaurants[rand].id.toString());
       },
     );

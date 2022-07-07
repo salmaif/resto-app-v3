@@ -14,7 +14,7 @@ class ApiService {
   ApiService(this.client);
 
   Future<RestoList> restoList() async {
-    final response = await http.get(Uri.parse(_base + _list));
+    final response = await client.get(Uri.parse(_base + _list));
     if (response.statusCode == 200) {
       return RestoList.fromJson(json.decode(response.body));
     } else {
